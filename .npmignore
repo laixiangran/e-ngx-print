@@ -1,0 +1,8 @@
+example/
+.idea/
+.gitignore
+tsconfig.json
+.npmignore
+CHANGELOG.md
+.editorconfig
+.angular-cli.json

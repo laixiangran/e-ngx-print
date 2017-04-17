@@ -1,0 +1,51 @@
+{
+	"name": "essence-ng2-print",
+	"version": "1.0.0",
+	"description": "essence-ng2-print is an Angular component that can print html and text.",
+	"keywords": [
+		"angular2",
+		"essence-ng2-print",
+		"laixiangran"
+	],
+	"homepage": "https://github.com/laixiangran/essence-ng2-print#readme",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/laixiangran/essence-ng2-print.git"
+	},
+	"author": {
+		"name": "赖祥燃",
+		"email": "laixiangran@163.com",
+		"bolg": "http://www.cnblogs.com/laixiangran",
+		"homepage": "http://www.laixiangran.cn"
+	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/laixiangran/essence-ng2-print/issues"
+	},
+	"scripts": {
+		"start": "npm run jit",
+		"jit": "ng serve -o",
+		"aot": "ng serve -o --aot",
+		"build": "npm run build-test",
+		"build-test": "ng build --prod --env=test --aot",
+		"build-prod": "ng build --prod --env=prod --aot"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"@angular/core": "^2.4.8",
+		"@angular/common": "^2.4.8",
+		"@angular/compiler": "^2.4.8",
+		"@angular/forms": "^2.4.8",
+		"@angular/http": "^2.4.8",
+		"@angular/platform-browser": "^2.4.8",
+		"@angular/platform-browser-dynamic": "^2.4.8",
+		"@angular/router": "^3.4.8",
+		"@angular/compiler-cli": "^2.4.8",
+		"@angular/cli": "1.0.0",
+		"@types/node": "^6.0.60",
+		"core-js": "^2.4.1",
+		"rxjs": "^5.0.1",
+		"zone.js": "^0.7.2",
+		"typescript": "^2.2.0"
+	}
+}

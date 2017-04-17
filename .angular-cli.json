@@ -1,0 +1,31 @@
+{
+	"apps": [
+		{
+			"root": "example",
+			"outDir": "example_dist",
+			"assets": [
+				"assets",
+				"favicon.ico"
+			],
+			"index": "index.html",
+			"main": "main.ts",
+			"polyfills": "polyfills.ts",
+			"tsconfig": "tsconfig.json",
+			"prefix": "",
+			"styles": [
+				"./index.css"
+			],
+			"scripts": [],
+			"environmentSource": "environments/environment.ts",
+			"environments": {
+				"dev": "environments/environment.ts",
+				"test": "environments/environment.test.ts",
+				"prod": "environments/environment.prod.ts"
+			}
+		}
+	],
+	"defaults": {
+		"styleExt": "scss",
+		"component": {}
+	}
+}

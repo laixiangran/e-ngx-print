@@ -1,0 +1,35 @@
+.spinner {
+    margin: 100px auto;
+    width: 32px;
+    height: 32px;
+    position: relative;
+}
+
+.cube1, .cube2 {
+    background-color: #000000;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    left: -30px;
+    animation: cubemove 1.8s infinite ease-in-out;
+}
+
+.cube2 {
+    animation-delay: -0.9s;
+}
+
+@keyframes cubemove {
+    25% {
+        transform: translateX(42px) rotate(-90deg) scale(0.5)
+    }
+    50% {
+        transform: translateX(42px) translateY(42px) rotate(-180deg)
+    }
+    75% {
+        transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5)
+    }
+    100% {
+        transform: rotate(-360deg)
+    }
+}
