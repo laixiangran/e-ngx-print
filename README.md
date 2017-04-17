@@ -1,4 +1,4 @@
-# essence-ng2-print v1.0.0
+# essence-ng2-print
 
 essence-ng2-print is an Angular component that can print html and text.
 
