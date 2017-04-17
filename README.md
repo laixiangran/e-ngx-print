@@ -10,7 +10,7 @@ essence-ng2-print is an Angular component that can print html and text.
 	npm install --save essence-ng2-print
 	```
 
-2. Add the EssenceNg2ViewerModule
+2. Add the EssenceNg2PrintModule
 
 	```typescript
 	import {EssenceNg2PrintModule} from "../../components/essence-ng2-print";
