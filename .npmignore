@@ -6,3 +6,4 @@ tsconfig.json
 CHANGELOG.md
 .editorconfig
 .angular-cli.json
+temp/
