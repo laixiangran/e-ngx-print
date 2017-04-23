@@ -1,6 +1,6 @@
 {
 	"name": "essence-ng2-print",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "essence-ng2-print is an Angular component that can print html and text.",
 	"keywords": [
 		"angular2",
