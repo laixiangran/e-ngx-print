@@ -1,48 +1,9 @@
 import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 
-let styles = `
-  .print-btn {
-		display: inline-block;
-		padding: 6px 12px;
-		margin-bottom: 0;
-		font-size: 14px;
-		font-weight: 400;
-		line-height: 1.42857143;
-		text-align: center;
-		white-space: nowrap;
-		vertical-align: middle;
-		touch-action: manipulation;
-		cursor: pointer;
-		user-select: none;
-		background-image: none;
-		border: 1px solid transparent;
-		border-radius: 4px;
-	}
-	
-	.print-btn-success {
-		color: #FFFFFF;
-		background-color: #5CB85C;
-		border-color:  #4CAE4C;
-	}
-	
-	.print-btn-success:focus,
-	.print-btn-success.focus {
-		color: #FFFFFF;
-		background-color: #449D44;
-		border-color: #255625;
-	}
-	
-	.print-btn-success:hover {
-		color: #FFFFFF;
-		background-color: #449D44;
-		border-color: #398439;
-	}
-`;
-
 @Component({
 	selector: 'essence-ng2-print',
-	template: `<button *ngIf="showBtn" [ngClass]="btnClass" (click)="print()" [disabled]="btnText === '准备打印...'">{{btnText}}</button>`,
-	styles: [styles]
+	templateUrl: './essence-ng2-print.component.html',
+	styleUrls: ['./essence-ng2-print.component.scss']
 })
 export class EssenceNg2PrintComponent implements OnInit {
 	@Input() mode: string;

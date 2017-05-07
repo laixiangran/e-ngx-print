@@ -23,7 +23,7 @@
 		"url": "https://github.com/laixiangran/essence-ng2-print/issues"
 	},
 	"scripts": {
-		"prepublish": "ngc",
+		"prepublish": "gulp prepublish && ngc",
 		"start": "npm run jit",
 		"jit": "ng serve -o",
 		"aot": "ng serve -o --aot",
@@ -35,20 +35,28 @@
 	"typings": "dist/index.d.ts",
 	"dependencies": {},
 	"devDependencies": {
-		"@angular/core": "^2.4.8",
+		"@angular/cli": "1.0.0",
 		"@angular/common": "^2.4.8",
 		"@angular/compiler": "^2.4.8",
+		"@angular/compiler-cli": "^2.4.8",
+		"@angular/core": "^2.4.8",
 		"@angular/forms": "^2.4.8",
 		"@angular/http": "^2.4.8",
 		"@angular/platform-browser": "^2.4.8",
 		"@angular/platform-browser-dynamic": "^2.4.8",
 		"@angular/router": "^3.4.8",
-		"@angular/compiler-cli": "^2.4.8",
-		"@angular/cli": "1.0.0",
 		"@types/node": "^6.0.60",
 		"core-js": "^2.4.1",
+		"del": "^2.2.2",
+		"gulp": "^3.9.1",
+		"gulp-clean": "^0.3.2",
+		"gulp-if": "^2.0.2",
+		"gulp-inline-ng2-template": "^4.0.0",
+		"gulp-rename": "^1.2.2",
+		"gulp-sass": "^3.1.0",
+		"run-sequence": "^1.2.2",
 		"rxjs": "^5.0.1",
-		"zone.js": "^0.7.2",
-		"typescript": "^2.2.0"
+		"typescript": "^2.2.0",
+		"zone.js": "^0.7.2"
 	}
 }

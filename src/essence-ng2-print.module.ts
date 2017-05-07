@@ -7,7 +7,7 @@ import {EssenceNg2PrintComponent} from "./essence-ng2-print.component";
 		CommonModule
 	],
 	declarations: [EssenceNg2PrintComponent],
-	exports: [EssenceNg2PrintComponent]
+	exports: [CommonModule, EssenceNg2PrintComponent]
 })
 export class EssenceNg2PrintModule {
 }

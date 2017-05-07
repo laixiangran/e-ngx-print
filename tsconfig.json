@@ -9,7 +9,7 @@
 		"noImplicitAny": false,
 		"sourceMap": true,
 		"declaration": true,
-		"rootDir": "src",
+		"rootDir": "aot",
 		"outDir": "dist",
 		"lib": [
 			"es6",
@@ -20,13 +20,14 @@
 		]
 	},
 	"files": [
-		"src/index.ts"
+		"aot/index.ts"
 	],
 	"exclude": [
 		"node_modules",
+		"src",
 		"example"
 	],
 	"angularCompilerOptions": {
-		"genDir": "./temp/factories"
+		"genDir": "./aot/factories"
 	}
 }
