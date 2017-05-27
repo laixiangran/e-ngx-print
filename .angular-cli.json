@@ -13,7 +13,8 @@
 			"tsconfig": "tsconfig.json",
 			"prefix": "",
 			"styles": [
-				"./index.css"
+				"./index.css",
+				"../node_modules/bootstrap/dist/css/bootstrap.min.css"
 			],
 			"scripts": [],
 			"environmentSource": "environments/environment.ts",

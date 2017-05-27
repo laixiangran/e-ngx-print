@@ -1,6 +1,6 @@
 {
 	"name": "essence-ng2-print",
-	"version": "1.0.6",
+	"version": "1.0.7",
 	"description": "essence-ng2-print is an Angular component that can print html and text.",
 	"keywords": [
 		"angular2",
@@ -24,16 +24,16 @@
 	},
 	"scripts": {
 		"prepublish": "gulp prepublish && ngc",
-		"start": "npm run jit",
-		"jit": "ng serve -o",
-		"aot": "ng serve -o --aot",
-		"build": "npm run build-test",
+		"start": "ng serve -o",
 		"build-test": "ng build --prod --env=test --aot",
 		"build-prod": "ng build --prod --env=prod --aot"
 	},
 	"module": "dist/index.js",
 	"typings": "dist/index.d.ts",
-	"dependencies": {},
+	"dependencies": {
+		"@types/bootstrap": "^3.3.33",
+		"bootstrap": "^3.3.7"
+	},
 	"devDependencies": {
 		"@angular/core": "^4.0.0",
 		"@angular/common": "^4.0.0",
