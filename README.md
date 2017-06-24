@@ -2,8 +2,6 @@
 
 essence-ng2-print is an Angular component that can print html and text.
 
-## Change Log
-
 ## Usage
 
 1. Install
@@ -222,13 +220,13 @@ essence-ng2-print is an Angular component that can print html and text.
 
 - `printCSS`（`?Array<string>`） - 打印内容css文件路径。将在打印页面生成link标签，支持绝对/相对路径（相对于当前路由地址），建议用绝对路径
 
-### Instance Method
-
-- `print` - 开始打印内容
-
 ### Outputs
 
 - `printComplete` - 打印完成的事件
+
+### Instance Method
+
+- `print` - 开始打印内容
 
 ## Develop
 
