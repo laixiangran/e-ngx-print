@@ -29,7 +29,7 @@ essence-ng2-print is an Angular component that can print html and text.
 	})
 	```
 
-4. template
+4. Use in Template
 
 	```html
 	<div id="print_div" #print_div>
@@ -129,7 +129,7 @@ essence-ng2-print is an Angular component that can print html and text.
 	</div>
 	```
 
-5. component
+5. Use in Component
 
 	```typescript
 	@ViewChild('print1') printComponent1: EssenceNg2PrintComponent;
