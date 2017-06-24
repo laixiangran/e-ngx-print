@@ -31,7 +31,6 @@
 	"module": "dist/index.js",
 	"typings": "dist/index.d.ts",
 	"dependencies": {
-		"@types/bootstrap": "^3.3.33",
 		"bootstrap": "^3.3.7"
 	},
 	"devDependencies": {
