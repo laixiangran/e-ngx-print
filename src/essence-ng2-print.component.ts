@@ -122,16 +122,16 @@ export class EssenceNg2PrintComponent implements OnInit {
 	 * 开始打印
 	 */
 	private startPrint () {
-		let timeoutId: number = window.setTimeout(() => {
+		let timeoutId: any = setTimeout(() => {
 			this.printWindow.focus();
 			this.printWindow.print();
 			if (this.mode === this.modes.popup) {
-				setTimeout(() => {
-					console.log("dd");
-					this.printWindow.close()
+				let id: any = setTimeout(() => {
+					clearTimeout(id);
+					this.printWindow.close();
 				}, 500);
 			}
-			window.clearTimeout(timeoutId);
+			clearTimeout(timeoutId);
 			this.printComplete.emit();
 			this.btnText = this.oldBtnText;
 		}, 500);
@@ -149,9 +149,9 @@ export class EssenceNg2PrintComponent implements OnInit {
 			let printIframe: any = document.createElement('iframe');
 			document.body.appendChild(printIframe);
 			printIframe.style.position = 'absolute';
-			printIframe.style.border = '0px';
-			printIframe.style.width = '0px';
-			printIframe.style.height = '0px';
+			printIframe.style.border = '0';
+			printIframe.style.width = '0';
+			printIframe.style.height = '0';
 			printIframe.style.left = '0';
 			printIframe.style.top = '0';
 			printIframe.style.zIndex = '-1';
