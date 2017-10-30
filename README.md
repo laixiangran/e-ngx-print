@@ -3,7 +3,6 @@
 essence-ng2-print is an Angular component that can print html and text.
 
 [![npm](https://img.shields.io/npm/v/essence-ng2-print.svg)][npm-badge-url]
-[![npm](https://img.shields.io/npm/v/essence-ng2-print/next.svg)][npm-badge-url]
 [![npm](https://img.shields.io/npm/l/essence-ng2-print.svg)][npm-badge-url]
 [![npm](https://img.shields.io/npm/dm/essence-ng2-print.svg)][npm-badge-url]
 
@@ -243,7 +242,3 @@ essence-ng2-print is an Angular component that can print html and text.
 	
 	npm start // 启动项目
 	```
-
-# License
-
-[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](/LICENSE)
