@@ -1,6 +1,6 @@
 # e-ngx-print
 
-e-ngx-print is an Angular component that can print html and text.
+基于Angular的打印组件，可打印HTML和文本。
 
 ## Usage
 
