@@ -1,7 +1,7 @@
 {
 	"name": "e-ngx-print",
 	"version": "1.2.0",
-	"description": "e-ngx-print is an Angular component that can print html and text.",
+	"description": "基于Angular的打印组件，可打印HTML和文本。",
 	"keywords": [
 		"angular2",
 		"e-ngx-print",
