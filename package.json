@@ -1,16 +1,16 @@
 {
-	"name": "essence-ng2-print",
-	"version": "1.1.0",
-	"description": "essence-ng2-print is an Angular component that can print html and text.",
+	"name": "e-ngx-print",
+	"version": "1.2.0",
+	"description": "e-ngx-print is an Angular component that can print html and text.",
 	"keywords": [
 		"angular2",
-		"essence-ng2-print",
+		"e-ngx-print",
 		"laixiangran"
 	],
-	"homepage": "https://github.com/laixiangran/essence-ng2-print#readme",
+	"homepage": "https://github.com/laixiangran/e-ngx-print#readme",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/laixiangran/essence-ng2-print.git"
+		"url": "https://github.com/laixiangran/e-ngx-print.git"
 	},
 	"author": {
 		"name": "赖祥燃",
@@ -20,7 +20,7 @@
 	},
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/laixiangran/essence-ng2-print/issues"
+		"url": "https://github.com/laixiangran/e-ngx-print/issues"
 	},
 	"scripts": {
 		"release": "gulp prepublish && ngc && npm publish",

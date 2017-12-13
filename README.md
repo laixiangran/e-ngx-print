@@ -1,20 +1,13 @@
-# essence-ng2-print
+# e-ngx-print
 
-essence-ng2-print is an Angular component that can print html and text.
-
-[![npm](https://img.shields.io/npm/v/essence-ng2-print.svg)](https://www.npmjs.com/package/essence-ng2-print)
-[![npm](https://img.shields.io/npm/l/essence-ng2-print.svg)](https://www.npmjs.com/package/essence-ng2-print)
-[![npm](https://img.shields.io/npm/dm/essence-ng2-print.svg)](https://www.npmjs.com/package/essence-ng2-print)
-
-[![GitHub forks](https://img.shields.io/github/forks/laixiangran/essence-ng2-print.svg?style=social&label=Fork)](https://github.com/laixiangran/essence-ng2-print/fork)
-[![GitHub stars](https://img.shields.io/github/stars/laixiangran/essence-ng2-print.svg?style=social&label=Star)](https://github.com/laixiangran/essence-ng2-print)
+e-ngx-print is an Angular component that can print html and text.
 
 ## Usage
 
 1. Install
 
 	```shell
-	npm install --save essence-ng2-print@latest
+	npm install --save e-ngx-print@latest
 	```
 
 2. Set in the .angular-cli.json（@angular/cli）
@@ -25,13 +18,13 @@ essence-ng2-print is an Angular component that can print html and text.
     ]
 	```
 
-3. Add the EssenceNg2PrintModule
+3. Add the ENgxPrintModule
 
 	```typescript
-	import {EssenceNg2PrintModule} from "essence-ng2-print";
+	import {ENgxPrintModule} from "e-ngx-print";
 	@NgModule({
 	    imports: [
-	        EssenceNg2PrintModule
+	        ENgxPrintModule
 	    ]
 	})
 	```
@@ -79,38 +72,38 @@ essence-ng2-print is an Angular component that can print html and text.
 	</div>
 	
 	<div>
-		<essence-ng2-print
+		<e-ngx-print
 				[btnText]="'iframe模式打印'"
 				[btnClass]="{'btn': true, 'btn-success': true}"
 				[printHTML]="print_div"
 				[printStyle]="printStyle"
 				[printCSS]="printCSS"
 				(printComplete)="printComplete()">
-		</essence-ng2-print>
+		</e-ngx-print>
 	</div>
 	
 	<div>
-		<essence-ng2-print
+		<e-ngx-print
 				[btnText]="'iframe模式打印字符串'"
 				[btnClass]="{'btn': true, 'btn-success': true}"
 				[printHTML]="editorText"
 				(printComplete)="printComplete()">
-		</essence-ng2-print>
+		</e-ngx-print>
 	</div>
 	
 	<div>
-		<essence-ng2-print #print1
+		<e-ngx-print #print1
 		                   [showBtn]="false"
 		                   [printHTML]="print_div"
 		                   [printStyle]="printStyle"
 		                   [printCSS]="printCSS"
 		                   (printComplete)="printComplete()">
-		</essence-ng2-print>
+		</e-ngx-print>
 		<button class="btn btn-primary" (click)="customPrint('print1')">自定义打印（iframe模式）</button>
 	</div>
 	
 	<div>
-		<essence-ng2-print
+		<e-ngx-print
 				[mode]="'popup'"
 				[popTitle]="'表格打印'"
 				[btnText]="'popup模式打印'"
@@ -119,11 +112,11 @@ essence-ng2-print is an Angular component that can print html and text.
 				[printStyle]="printStyle"
 				[printCSS]="printCSS"
 				(printComplete)="printComplete()">
-		</essence-ng2-print>
+		</e-ngx-print>
 	</div>
 	
 	<div>
-		<essence-ng2-print #print2
+		<e-ngx-print #print2
 		                   [mode]="'popup'"
 		                   [popTitle]="'表格打印'"
 		                   [showBtn]="false"
@@ -131,7 +124,7 @@ essence-ng2-print is an Angular component that can print html and text.
 		                   [printStyle]="printStyle"
 		                   [printCSS]="printCSS"
 		                   (printComplete)="printComplete()">
-		</essence-ng2-print>
+		</e-ngx-print>
 		<button class="btn btn-primary" (click)="customPrint('print2')">自定义打印（popup模式）</button>
 	</div>
 	```
@@ -139,8 +132,8 @@ essence-ng2-print is an Angular component that can print html and text.
 5. Use in Component
 
 	```typescript
-	@ViewChild('print1') printComponent1: EssenceNg2PrintComponent;
-	@ViewChild('print2') printComponent2: EssenceNg2PrintComponent;
+	@ViewChild('print1') printComponent1: ENgxPrintComponent;
+	@ViewChild('print2') printComponent2: ENgxPrintComponent;
 	
 	printDiv: any;
 	showHead: boolean = true;
@@ -242,3 +235,7 @@ essence-ng2-print is an Angular component that can print html and text.
 	
 	npm start // 启动项目
 	```
+
+# License
+
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](/LICENSE)

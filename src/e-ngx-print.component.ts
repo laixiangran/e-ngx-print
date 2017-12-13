@@ -1,11 +1,11 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-    selector: 'essence-ng2-print',
-    templateUrl: './essence-ng2-print.component.html',
-    styleUrls: ['./essence-ng2-print.component.scss']
+    selector: 'e-ngx-print',
+    templateUrl: './e-ngx-print.component.html',
+    styleUrls: ['./e-ngx-print.component.scss']
 })
-export class EssenceNg2PrintComponent implements OnInit {
+export class ENgxPrintComponent implements OnInit {
     @Input() mode: string;
     @Input() standard: string;
     @Input() popTitle: string;
