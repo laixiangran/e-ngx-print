@@ -1,8 +1,14 @@
+# 1.2.0 (2017-12-13)
+
+- 将essence-ng2-print更名为e-ngx-print
+
+# 1.1.0 (2017-10-30)
+
+- 修改README.md
+
 # 1.0.7 (2017-05-27)
 
-## Other
-
-修改README.md
+- 修改README.md
 
 # 1.0.6 (2017-05-17)
 

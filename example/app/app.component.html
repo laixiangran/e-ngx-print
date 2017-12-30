@@ -41,17 +41,17 @@
 	</div>
 	<h2>两种打印模式（iframe and popup）- 打印指定html</h2>
 	<div>
-		<essence-ng2-print
+		<e-ngx-print
 			[btnText]="'iframe模式'"
 			[btnClass]="{'btn': true, 'btn-success': true}"
 			[printHTML]="print_div"
 			[printStyle]="printStyle"
 			[printCSS]="printCSS"
 			(printComplete)="printComplete()">
-		</essence-ng2-print>
+		</e-ngx-print>
 	</div>
 	<div>
-		<essence-ng2-print
+		<e-ngx-print
 			[mode]="'popup'"
 			[popTitle]="'表格打印'"
 			[btnText]="'popup模式'"
@@ -60,40 +60,40 @@
 			[printStyle]="printStyle"
 			[printCSS]="printCSS"
 			(printComplete)="printComplete()">
-		</essence-ng2-print>
+		</e-ngx-print>
 	</div>
 	<h2>打印指定字符串</h2>
 	<div>
-		<essence-ng2-print
+		<e-ngx-print
 			[btnText]="'iframe模式'"
 			[btnClass]="{'btn': true, 'btn-success': true}"
 			[printHTML]="editorText"
 			(printComplete)="printComplete()">
-		</essence-ng2-print>
+		</e-ngx-print>
 	</div>
 	<div>
-		<essence-ng2-print
+		<e-ngx-print
 			[mode]="'popup'"
 			[popTitle]="'表格打印'"
 			[btnText]="'popup模式'"
 			[btnClass]="{'btn': true, 'btn-warning': true}"
 			[printHTML]="editorText"
 			(printComplete)="printComplete()">
-		</essence-ng2-print>
+		</e-ngx-print>
 	</div>
 	<h2>自定义打印（将隐藏的html显示并打印）</h2>
 	<div>
-		<essence-ng2-print #print1
+		<e-ngx-print #print1
 						   [showBtn]="false"
 						   [printHTML]="print_div"
 						   [printStyle]="printStyle"
 						   [printCSS]="printCSS"
 						   (printComplete)="printComplete()">
-		</essence-ng2-print>
+		</e-ngx-print>
 		<button class="btn btn-success" (click)="customPrint('print1')">iframe模式</button>
 	</div>
 	<div>
-		<essence-ng2-print #print2
+		<e-ngx-print #print2
 						   [mode]="'popup'"
 						   [popTitle]="'表格打印'"
 						   [showBtn]="false"
@@ -101,7 +101,7 @@
 						   [printStyle]="printStyle"
 						   [printCSS]="printCSS"
 						   (printComplete)="printComplete()">
-		</essence-ng2-print>
+		</e-ngx-print>
 		<button class="btn btn-warning" (click)="customPrint('print2')">popup模式</button>
 	</div>
 </div>

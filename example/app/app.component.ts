@@ -1,5 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { EssenceNg2PrintComponent } from "../../src/essence-ng2-print.component";
+import { ENgxPrintComponent } from "../../src/e-ngx-print.component";
 
 @Component({
     selector: 'app-root',
@@ -8,8 +8,8 @@ import { EssenceNg2PrintComponent } from "../../src/essence-ng2-print.component"
 })
 export class AppComponent {
 
-    @ViewChild('print1') printComponent1: EssenceNg2PrintComponent;
-    @ViewChild('print2') printComponent2: EssenceNg2PrintComponent;
+    @ViewChild('print1') printComponent1: ENgxPrintComponent;
+    @ViewChild('print2') printComponent2: ENgxPrintComponent;
 
     printDiv: any;
     showHead: boolean = true;
