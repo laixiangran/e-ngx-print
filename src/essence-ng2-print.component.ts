@@ -113,7 +113,7 @@ export class EssenceNg2PrintComponent implements OnInit {
                 html = this.printHTML;
             }
         } else {
-            throw '未绑定属性[printHTML]';
+            throw 'The attribute printHTM is not entered!';
         }
         return `<body>${html}</body>`;
     }
