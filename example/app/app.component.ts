@@ -43,13 +43,13 @@ export class AppComponent {
         this.printStyle =
             `
 			th, td {
-				color: red;
+				color: red !important;
 			}
 			.td_blue {
-				color: blue;
+				color: blue !important;
 			}
 			#th_green {
-			    color: green;
+			    color: green !important;
 			}
 			`;
     }

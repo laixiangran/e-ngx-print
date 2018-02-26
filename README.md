@@ -10,15 +10,7 @@
 	npm install --save e-ngx-print@latest
 	```
 
-2. Set in the .angular-cli.json（@angular/cli）
-
-	```json
-    "styles": [
-        "../node_modules/bootstrap/dist/css/bootstrap.min.css"
-    ]
-	```
-
-3. Add the ENgxPrintModule
+2. Add the ENgxPrintModule
 
 	```typescript
 	import {ENgxPrintModule} from "e-ngx-print";
@@ -29,7 +21,7 @@
 	})
 	```
 
-4. Use in Template
+3. Use in Template
 
 	```html
 	<div id="print_div" #print_div>
@@ -129,7 +121,7 @@
 	</div>
 	```
 
-5. Use in Component
+4. Use in Component
 
 	```typescript
 	@ViewChild('print1') printComponent1: ENgxPrintComponent;

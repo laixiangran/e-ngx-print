@@ -141,7 +141,7 @@ export class ENgxPrintComponent implements OnInit {
      * 创建iframe
      */
     private createIframe() {
-        let oldFrame: any = document.getElementsByClassName('ng2-print-frame');
+        let oldFrame: any = document.getElementsByClassName('e-ngx-print-frame');
         if (oldFrame.length > 0) {
             oldFrame[0].parentNode.removeChild(oldFrame[0]);
         }
@@ -155,7 +155,7 @@ export class ENgxPrintComponent implements OnInit {
             printIframe.style.left = '0';
             printIframe.style.top = '0';
             printIframe.style.zIndex = '-1';
-            printIframe.className = "ng2-print-frame";
+            printIframe.className = "e-ngx-print-frame";
             this.printWindow = printIframe.contentWindow;
             this.printDoc = printIframe.contentDocument ? printIframe.contentDocument : (printIframe.contentWindow ? printIframe.contentWindow.document : printIframe.document);
         }

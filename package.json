@@ -1,6 +1,6 @@
 {
 	"name": "e-ngx-print",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"description": "基于Angular的打印组件，可打印HTML和文本。",
 	"keywords": [
 		"angular2",
@@ -30,9 +30,7 @@
 	},
 	"module": "dist/index.js",
 	"typings": "dist/index.d.ts",
-	"dependencies": {
-		"bootstrap": "^3.3.7"
-	},
+	"dependencies": {},
 	"devDependencies": {
 		"@angular/core": "^4.0.0",
 		"@angular/common": "^4.0.0",
@@ -45,6 +43,7 @@
 		"@angular/compiler-cli": "^4.0.0",
 		"@angular/cli": "^1.2.0",
 		"@types/node": "^6.0.60",
+		"bootstrap": "^3.3.7",
 		"classlist.js": "^1.1.20150312",
 		"intl": "^1.2.5",
 		"web-animations-js": "^2.2.5",

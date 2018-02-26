@@ -1,3 +1,7 @@
+# 1.2.1 (2018-02-26)
+
+- 不依赖bootstrap
+
 # 1.2.0 (2017-12-13)
 
 - 将essence-ng2-print更名为e-ngx-print
