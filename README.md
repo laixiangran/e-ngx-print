@@ -160,7 +160,7 @@
             }
         ];
 
-        this.printCSS = ['http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css', '/assets/styles/print.css'];
+        this.printCSS = ['http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css'];
 
         this.printStyle =
             `
