@@ -41,6 +41,7 @@ export class ENgxPrintComponent implements OnInit {
 			'print-btn': true,
 			'print-btn-success': true
 		};
+		this.popTitle = '打印窗口';
 		this.btnText = '打印';
 		this.oldBtnText = this.btnText;
 		this.printComplete = new EventEmitter<any>(false);
@@ -66,11 +67,9 @@ export class ENgxPrintComponent implements OnInit {
 		if (this.mode === this.modes.iframe) {
 			return '';
 		}
-
 		if (this.standard === this.standards.html5) {
 			return '<!DOCTYPE html>';
 		}
-
 		let transitional: string = this.standard === this.standards.loose ? 'Transitional' : '',
 			dtd: string = this.standard === this.standards.loose ? 'loose' : 'strict';
 		return `<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 ${transitional}//EN" "http://www.w3.org/TR/html4/${dtd}.dtd">`;
@@ -95,7 +94,6 @@ export class ENgxPrintComponent implements OnInit {
 		if (this.printStyle) {
 			styles = `<style>${this.printStyle}</style>`;
 		}
-
 		return `<head><title>${this.popTitle}</title>${styles}${links}</head>`;
 	}
 
@@ -104,7 +102,6 @@ export class ENgxPrintComponent implements OnInit {
 	 * @returns {string}
 	 */
 	private getBody() {
-		// 打印内容
 		let html: string = '';
 		if (this.printHTML) {
 			if (this.printHTML.outerHTML) {
@@ -112,8 +109,6 @@ export class ENgxPrintComponent implements OnInit {
 			} else {
 				html = this.printHTML;
 			}
-		} else {
-			throw 'The attribute printHTM is not entered!';
 		}
 		return `<body>${html}</body>`;
 	}
@@ -198,7 +193,8 @@ export class ENgxPrintComponent implements OnInit {
 	/**
 	 * 打印
 	 */
-	print() {
+	print(printHTML?: any) {
+		this.printHTML = printHTML ? printHTML : this.printHTML;
 		this.oldBtnText = this.btnText;
 		this.btnText = '准备打印...';
 		let timeoutId: number = window.setTimeout(() => {
