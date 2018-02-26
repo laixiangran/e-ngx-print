@@ -210,7 +210,7 @@
 
 - `printStyle`（`?string`） - 打印内容style。将写进打印页面的style标签中
 
-- `printCSS`（`?Array<string>`） - 打印内容css文件路径。将在打印页面生成link标签，支持绝对/相对路径（相对于当前路由地址），建议用绝对路径
+- `printCSS`（`?Array<string>`） - 打印内容css文件路径。将在打印页面生成link标签，支持绝对路径或相对路径（**使用相对路径时请注意/和./以及../的区别**）
 
 ### Outputs
 

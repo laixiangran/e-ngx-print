@@ -38,20 +38,9 @@ export class AppComponent {
             }
         ];
 
-        this.printCSS = ['http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css'];
+        this.printCSS = ['http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css', '/assets/styles/print.css'];
 
-        this.printStyle =
-            `
-			th, td {
-				color: red !important;
-			}
-			.td_blue {
-				color: blue !important;
-			}
-			#th_green {
-			    color: green !important;
-			}
-			`;
+        this.printStyle = '';
     }
 
     getPrintDiv() {
