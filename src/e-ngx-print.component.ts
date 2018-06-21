@@ -191,10 +191,12 @@ export class ENgxPrintComponent implements OnInit {
 	}
 
 	/**
-	 * 打印
+	 * 开始打印
+	 * @param printHTML 打印的HTML
 	 */
 	print(printHTML?: any) {
 		this.printHTML = printHTML ? printHTML : this.printHTML;
+		this.setInputAndTextareaValue();
 		this.oldBtnText = this.btnText;
 		this.btnText = '准备打印...';
 		let timeoutId: number = window.setTimeout(() => {
@@ -202,6 +204,43 @@ export class ENgxPrintComponent implements OnInit {
 			this.getPrintWindow();
 			this.write();
 			this.startPrint();
+			this.setInputAndTextareaValue(true);
 		}, 500);
+	}
+
+	/**
+	 * 设置打印文档中输入框和文本域的值
+	 * @param {boolean} isReset 是否恢复到初始状态
+	 */
+	setInputAndTextareaValue(isReset: boolean = false) {
+		const inputs: any = this.printHTML.getElementsByTagName('input');
+		const excludeTypes: string[] = ['radio', 'checkbox', 'hidden', 'button', 'reset', 'submit']; // 排除的 input 类型
+		const textareas: any = this.printHTML.getElementsByTagName('textarea');
+		Array.prototype.slice.call(inputs,0).forEach((input: HTMLInputElement) => {
+			if (excludeTypes.indexOf(input.type) < 0) {
+				if (!isReset) {
+					if (!input.getAttribute('value')) {
+						input.setAttribute('isSetValue', 'true'); // 标识 value 是否是打印时设置的，用于打印完之后判断是否删除
+						input.setAttribute('value', input.value);
+					}
+				} else {
+					if (!!input.getAttribute('isSetValue')) {
+						input.removeAttribute('value');
+					}
+				}
+			}
+		});
+		Array.prototype.slice.call(textareas,0).forEach((textarea: HTMLTextAreaElement) => {
+			if (!isReset) {
+				if (!textarea.innerHTML) {
+					textarea.setAttribute('isSetHtml', 'true'); // 标识 innerHTML 是否是打印时设置的，用于打印完之后判断是否删除
+					textarea.innerHTML = textarea.value;
+				}
+			} else {
+				if (!!textarea.getAttribute('isSetHtml')) {
+					textarea.innerHTML = '';
+				}
+			}
+		});
 	}
 }

@@ -1,6 +1,6 @@
 {
 	"name": "e-ngx-print",
-	"version": "5.0.0",
+	"version": "5.1.0",
 	"description": "基于Angular的打印组件，可打印HTML和文本。",
 	"keywords": [
 		"angular",
