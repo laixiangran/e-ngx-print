@@ -129,6 +129,7 @@ export class ENgxPrintComponent implements OnInit {
 			clearTimeout(timeoutId);
 			this.printComplete.emit();
 			this.btnText = this.oldBtnText;
+			this.setInputAndTextareaValue(true);
 		}, 500);
 	}
 
@@ -196,15 +197,14 @@ export class ENgxPrintComponent implements OnInit {
 	 */
 	print(printHTML?: any) {
 		this.printHTML = printHTML ? printHTML : this.printHTML;
-		this.setInputAndTextareaValue();
 		this.oldBtnText = this.btnText;
 		this.btnText = '准备打印...';
 		let timeoutId: number = window.setTimeout(() => {
 			window.clearTimeout(timeoutId);
+			this.setInputAndTextareaValue();
 			this.getPrintWindow();
 			this.write();
 			this.startPrint();
-			this.setInputAndTextareaValue(true);
 		}, 500);
 	}
 
@@ -214,23 +214,40 @@ export class ENgxPrintComponent implements OnInit {
 	 */
 	setInputAndTextareaValue(isReset: boolean = false) {
 		const inputs: any = this.printHTML.getElementsByTagName('input');
-		const excludeTypes: string[] = ['radio', 'checkbox', 'hidden', 'button', 'reset', 'submit']; // 排除的 input 类型
+		console.log(inputs);
+		const excludeTypes: string[] = ['hidden', 'button', 'reset', 'submit']; // 排除的 input 类型
 		const textareas: any = this.printHTML.getElementsByTagName('textarea');
-		Array.prototype.slice.call(inputs,0).forEach((input: HTMLInputElement) => {
+		const selects: any = this.printHTML.getElementsByTagName('select');
+		this.toArray(inputs).forEach((input: HTMLInputElement) => {
 			if (excludeTypes.indexOf(input.type) < 0) {
 				if (!isReset) {
-					if (!input.getAttribute('value')) {
-						input.setAttribute('isSetValue', 'true'); // 标识 value 是否是打印时设置的，用于打印完之后判断是否删除
-						input.setAttribute('value', input.value);
+					if (input.type === 'radio' || input.type === 'checkbox') {
+						if (!input.getAttribute('checked') && input.checked) {
+							input.setAttribute('isSetValue', 'true'); // 标识 value 是否是打印时设置的，用于打印完之后判断是否删除
+							input.setAttribute('checked', input.checked + '');
+						}
+					} else {
+						if (!input.getAttribute('value')) {
+							input.setAttribute('isSetValue', 'true'); // 标识 value 是否是打印时设置的，用于打印完之后判断是否删除
+							input.setAttribute('value', input.value);
+						}
 					}
 				} else {
-					if (!!input.getAttribute('isSetValue')) {
-						input.removeAttribute('value');
+					if (input.type === 'radio' || input.type === 'checkbox') {
+						if (!!input.getAttribute('isSetValue')) {
+							input.removeAttribute('checked');
+							input.removeAttribute('isSetValue');
+						}
+					} else {
+						if (!!input.getAttribute('isSetValue')) {
+							input.removeAttribute('value');
+							input.removeAttribute('isSetValue');
+						}
 					}
 				}
 			}
 		});
-		Array.prototype.slice.call(textareas,0).forEach((textarea: HTMLTextAreaElement) => {
+		this.toArray(textareas).forEach((textarea: HTMLTextAreaElement) => {
 			if (!isReset) {
 				if (!textarea.innerHTML) {
 					textarea.setAttribute('isSetHtml', 'true'); // 标识 innerHTML 是否是打印时设置的，用于打印完之后判断是否删除
@@ -239,8 +256,33 @@ export class ENgxPrintComponent implements OnInit {
 			} else {
 				if (!!textarea.getAttribute('isSetHtml')) {
 					textarea.innerHTML = '';
+					textarea.removeAttribute('isSetHtml');
 				}
 			}
 		});
+		this.toArray(selects).forEach((select: HTMLSelectElement) => {
+			this.toArray(select.selectedOptions).forEach((option: HTMLOptionElement) => {
+				if (!isReset) {
+					if (!option.getAttribute('selected')) {
+						option.setAttribute('isSetValue', 'true'); // 标识 innerHTML 是否是打印时设置的，用于打印完之后判断是否删除
+						option.setAttribute('selected', 'true');
+					}
+				} else {
+					if (!!option.getAttribute('isSetValue')) {
+						option.removeAttribute('selected');
+						option.removeAttribute('isSetValue');
+					}
+				}
+			});
+		});
+	}
+
+	/**
+	 * 将类数组转换成数组
+	 * @param arr
+	 * @returns {any[]}
+	 */
+	toArray(arr: any): any[] {
+		return Array.prototype.slice.call(arr, 0);
 	}
 }

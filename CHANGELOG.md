@@ -1,3 +1,7 @@
+# 5.2.0（2018-06-25）
+
+- 支持打印 checkbox、radio 及 select
+
 # 5.1.0（2018-06-21）
 
 - 支持打印 input 及 textarea

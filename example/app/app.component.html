@@ -38,6 +38,17 @@
 			</tr>
 			</tbody>
 		</table>
+		<h3 *ngIf="hideTable1">打印表单元素</h3>
+		<form *ngIf="hideTable1">
+			<input type="text" name="t1" [(ngModel)]="testObj.t1">
+			<input type="checkbox" name="t2" [(ngModel)]="testObj.t2" value="1">
+			<input type="radio" name="t3" [(ngModel)]="testObj.t3" value="2">
+			<textarea name="t4" [(ngModel)]="testObj.t4"></textarea>
+			<select name="t5" [(ngModel)]="testObj.t5">
+				<option value="1">1</option>
+				<option value="2">2</option>
+			</select>
+		</form>
 	</div>
 	<h2>两种打印模式（iframe and popup）- 打印指定html</h2>
 	<div>
@@ -101,6 +112,6 @@
 						   [printCSS]="printCSS"
 						   (printComplete)="printComplete()">
 		</e-ngx-print>
-		<button class="btn btn-warning" (click)="customPrint('print2')">popup模式</button>
+		<button class="btn btn-warning" (click)="customPrint('print1')">popup模式</button>
 	</div>
 </div>
