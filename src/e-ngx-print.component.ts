@@ -110,7 +110,7 @@ export class ENgxPrintComponent implements OnInit {
 				html = this.printHTML;
 			}
 		}
-		return `<body>${html}</body>`;
+		return `<body><object id="eNgxPrintWB" style="display: none;" height="0" classid="clsid:8856F961-340A-11D0-A96B-00C04FD705A2"></object>${html}</body>`;
 	}
 
 	/**
@@ -119,7 +119,15 @@ export class ENgxPrintComponent implements OnInit {
 	private startPrint() {
 		let timeoutId: any = setTimeout(() => {
 			this.printWindow.focus();
-			this.printWindow.print();
+			if (!!window['ActiveXObject'] || 'ActiveXObject' in window) { // IE浏览器
+				try {
+					this.printWindow['eNgxPrintWB'].ExecWB(7, 1); // IE下增加打印预览
+				} catch (e) {
+					console.error(e);
+				}
+			} else {
+				this.printWindow.print();
+			}
 			if (this.mode === this.modes.popup) {
 				let id: any = setTimeout(() => {
 					clearTimeout(id);
@@ -197,6 +205,11 @@ export class ENgxPrintComponent implements OnInit {
 	 */
 	print(printHTML?: any) {
 		this.printHTML = printHTML ? printHTML : this.printHTML;
+		if (!this.printHTML.outerHTML) {
+			const div: HTMLDivElement = document.createElement('div');
+			div.innerHTML = this.printHTML;
+			this.printHTML = div;
+		}
 		this.oldBtnText = this.btnText;
 		this.btnText = '准备打印...';
 		let timeoutId: number = window.setTimeout(() => {
@@ -214,7 +227,6 @@ export class ENgxPrintComponent implements OnInit {
 	 */
 	setInputAndTextareaValue(isReset: boolean = false) {
 		const inputs: any = this.printHTML.getElementsByTagName('input');
-		console.log(inputs);
 		const excludeTypes: string[] = ['hidden', 'button', 'reset', 'submit']; // 排除的 input 类型
 		const textareas: any = this.printHTML.getElementsByTagName('textarea');
 		const selects: any = this.printHTML.getElementsByTagName('select');
@@ -283,6 +295,6 @@ export class ENgxPrintComponent implements OnInit {
 	 * @returns {any[]}
 	 */
 	toArray(arr: any): any[] {
-		return Array.prototype.slice.call(arr, 0);
+		return arr ? Array.prototype.slice.call(arr, 0) : [];
 	}
 }
