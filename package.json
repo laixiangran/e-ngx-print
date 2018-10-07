@@ -25,8 +25,8 @@
 	"scripts": {
 		"release": "gulp prepublish && ngc && npm publish",
 		"start": "ng serve -o",
-		"test": "ng build --prod --env=test --aot",
-		"prod": "ng build --prod --env=prod --aot"
+		"test": "ng build --prod --env=test --base-href /",
+		"prod": "ng build --prod --env=prod --base-href /e-ngx-print/demo/"
 	},
 	"module": "dist/index.js",
 	"typings": "dist/index.d.ts",

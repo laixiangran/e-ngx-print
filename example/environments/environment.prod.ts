@@ -6,5 +6,5 @@
 
 export const environment = {
     production: true,
-    serverHost: '/'
+    serverHost: '/e-ngx-print/demo/'
 };
