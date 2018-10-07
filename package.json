@@ -25,8 +25,8 @@
 	"scripts": {
 		"release": "gulp prepublish && ngc && npm publish",
 		"start": "ng serve -o",
-		"build-test": "ng build --prod --env=test --aot",
-		"build-prod": "ng build --prod --env=prod --aot"
+		"test": "ng build --prod --env=test --aot",
+		"prod": "ng build --prod --env=prod --aot"
 	},
 	"module": "dist/index.js",
 	"typings": "dist/index.d.ts",
