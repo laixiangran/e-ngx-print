@@ -1,6 +1,6 @@
 {
 	"name": "e-ngx-print",
-	"version": "5.3.0",
+	"version": "5.3.1",
 	"description": "基于Angular的打印组件，可打印HTML和文本。",
 	"keywords": [
 		"angular",
@@ -23,10 +23,10 @@
 		"url": "https://github.com/laixiangran/e-ngx-print/issues"
 	},
 	"scripts": {
-		"release": "gulp prepublish && ngc && npm publish",
 		"start": "ng serve -o",
-		"test": "ng build --prod --env=test --base-href /",
-		"prod": "ng build --prod --env=prod --base-href /e-ngx-print/demo/"
+		"test": "ng build --prod --env=test",
+		"prod": "ng build --prod --env=prod",
+		"release": "gulp prepublish && ngc && npm publish"
 	},
 	"module": "dist/index.js",
 	"typings": "dist/index.d.ts",

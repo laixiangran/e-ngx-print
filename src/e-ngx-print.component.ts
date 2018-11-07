@@ -117,7 +117,7 @@ export class ENgxPrintComponent implements OnInit {
 	 * 开始打印
 	 */
 	private startPrint() {
-		let timeoutId: any = setTimeout(() => {
+		const timeoutId = setTimeout(() => {
 			this.printWindow.focus();
 			if (!!window['ActiveXObject'] || 'ActiveXObject' in window) { // IE浏览器
 				try {
@@ -129,8 +129,8 @@ export class ENgxPrintComponent implements OnInit {
 				this.printWindow.print();
 			}
 			if (this.mode === this.modes.popup) {
-				let id: any = setTimeout(() => {
-					clearTimeout(id);
+				const timeoutId2 = setTimeout(() => {
+					clearTimeout(timeoutId2);
 					this.printWindow.close();
 				}, 500);
 			}
@@ -138,7 +138,7 @@ export class ENgxPrintComponent implements OnInit {
 			this.printComplete.emit();
 			this.btnText = this.oldBtnText;
 			this.setInputAndTextareaValue(true);
-		}, 500);
+		}, 1000);
 	}
 
 	/**
@@ -212,13 +212,13 @@ export class ENgxPrintComponent implements OnInit {
 		}
 		this.oldBtnText = this.btnText;
 		this.btnText = '准备打印...';
-		let timeoutId: number = window.setTimeout(() => {
-			window.clearTimeout(timeoutId);
+		const timeoutId = setTimeout(() => {
+			clearTimeout(timeoutId);
 			this.setInputAndTextareaValue();
 			this.getPrintWindow();
 			this.write();
 			this.startPrint();
-		}, 500);
+		}, 1000);
 	}
 
 	/**
