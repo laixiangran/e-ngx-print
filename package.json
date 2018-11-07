@@ -24,8 +24,8 @@
 	},
 	"scripts": {
 		"start": "ng serve -o",
-		"test": "ng build --prod --env=test",
-		"prod": "ng build --prod --env=prod",
+		"test": "ng build --prod --env=test --base-href /",
+		"prod": "ng build --prod --env=prod --base-href /e-ngx-print/demo/",
 		"release": "gulp prepublish && ngc && npm publish"
 	},
 	"module": "dist/index.js",
