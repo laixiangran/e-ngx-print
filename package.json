@@ -1,6 +1,6 @@
 {
   "name": "ngx-web-print",
-  "version": "7.0.0",
+  "version": "9.0.0",
   "description": "基于Angular的打印组件，可打印HTML和文本。",
   "keywords": [
     "angular",
@@ -19,6 +19,12 @@
     "bolg": "http://www.cnblogs.com/laixiangran",
     "homepage": "http://www.laixiangran.cn"
   },
+  "contributors": [{
+    "name": "Benjamin Qin",
+    "email": "benjamin.qin@gmail.com",
+    "url": "https://www.iconben.com"
+  }],
+
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/iconben/e-ngx-print/issues"
@@ -35,7 +41,7 @@
     "rxjs-compat": "^6.6.3"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^0.8.9",
+    "@angular-devkit/build-angular": "^0.901.13",
     "@angular/animations": "^9.1.13",
     "@angular/cli": "^9.1.13",
     "@angular/common": "^9.1.13",
@@ -64,7 +70,7 @@
     "stylelint": "^8.2.0",
     "stylelint-scss": "^2.1.0",
     "ts-node": "^3.2.0",
-    "tslib": "^1.10.0",
+    "tslib": "^1.14.1",
     "tslint": "^5.7.0",
     "typescript": "^3.8.3",
     "web-animations-js": "^2.2.5",
