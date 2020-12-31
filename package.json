@@ -1,69 +1,79 @@
 {
-	"name": "e-ngx-print",
-	"version": "5.3.1",
-	"description": "基于Angular的打印组件，可打印HTML和文本。",
-	"keywords": [
-		"angular",
-		"e-ngx-print",
-		"laixiangran"
-	],
-	"homepage": "https://github.com/laixiangran/e-ngx-print#readme",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/laixiangran/e-ngx-print.git"
-	},
-	"author": {
-		"name": "赖祥燃",
-		"email": "laixiangran@163.com",
-		"bolg": "http://www.cnblogs.com/laixiangran",
-		"homepage": "http://www.laixiangran.cn"
-	},
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/laixiangran/e-ngx-print/issues"
-	},
-	"scripts": {
-		"start": "ng serve -o",
-		"test": "ng build --prod --env=test --base-href /",
-		"prod": "ng build --prod --env=prod --base-href /e-ngx-print/demo/",
-		"release": "gulp prepublish && ngc && npm publish"
-	},
-	"module": "dist/index.js",
-	"typings": "dist/index.d.ts",
-	"dependencies": {},
-	"devDependencies": {
-		"@angular/core": "^5.0.0",
-		"@angular/common": "^5.0.0",
-		"@angular/compiler": "^5.0.0",
-		"@angular/forms": "^5.0.0",
-		"@angular/http": "^5.0.0",
-		"@angular/platform-browser": "^5.0.0",
-		"@angular/platform-browser-dynamic": "^5.0.0",
-		"@angular/router": "^5.0.0",
-		"@angular/compiler-cli": "^5.0.0",
-		"@angular/animations": "^5.0.0",
-		"@angular/cli": "^1.5.0",
-		"rxjs": "^5.5.0",
-		"zone.js": "^0.8.14",
-		"codelyzer": "^4.0.1",
-		"stylelint": "^8.2.0",
-		"stylelint-scss": "^2.1.0",
-		"ts-node": "^3.2.0",
-		"tslint": "^5.7.0",
-		"typescript": "2.4.2",
-		"@types/node": "^6.0.60",
-		"bootstrap": "^3.3.7",
-		"classlist.js": "^1.1.20150312",
-		"intl": "^1.2.5",
-		"web-animations-js": "^2.2.5",
-		"core-js": "^2.4.1",
-		"del": "^2.2.2",
-		"gulp": "^3.9.1",
-		"gulp-clean": "^0.3.2",
-		"gulp-if": "^2.0.2",
-		"gulp-inline-ng2-template": "^4.0.0",
-		"gulp-rename": "^1.2.2",
-		"gulp-sass": "^3.1.0",
-		"run-sequence": "^1.2.2"
-	}
+  "name": "ngx-web-print",
+  "version": "9.0.0",
+  "description": "基于Angular的打印组件，可打印HTML和文本。",
+  "keywords": [
+    "angular",
+    "ngx-web-print",
+    "e-ngx-print",
+    "laixiangran"
+  ],
+  "homepage": "https://github.com/iconben/e-ngx-print#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iconben/e-ngx-print.git"
+  },
+  "author": {
+    "name": "赖祥燃",
+    "email": "laixiangran@163.com",
+    "bolg": "http://www.cnblogs.com/laixiangran",
+    "homepage": "http://www.laixiangran.cn"
+  },
+  "contributors": [{
+    "name": "Benjamin Qin",
+    "email": "benjamin.qin@gmail.com",
+    "url": "https://www.iconben.com"
+  }],
+
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iconben/e-ngx-print/issues"
+  },
+  "scripts": {
+    "start": "ng serve -o",
+    "test": "ng build --prod --env=test --base-href /",
+    "prod": "ng build --prod --env=prod --base-href /e-ngx-print/demo/",
+    "release": "gulp prepublish && ngc && npm publish"
+  },
+  "module": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "dependencies": {
+    "rxjs-compat": "^6.6.3"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^0.901.13",
+    "@angular/animations": "^9.1.13",
+    "@angular/cli": "^9.1.13",
+    "@angular/common": "^9.1.13",
+    "@angular/compiler": "^9.1.13",
+    "@angular/compiler-cli": "^9.1.13",
+    "@angular/core": "^9.1.13",
+    "@angular/forms": "^9.1.13",
+    "@angular/platform-browser": "^9.1.13",
+    "@angular/platform-browser-dynamic": "^9.1.13",
+    "@angular/router": "^9.1.13",
+    "@types/node": "^7.10.14",
+    "bootstrap": "^3.3.7",
+    "classlist.js": "^1.1.20150312",
+    "codelyzer": "^5.2.2",
+    "core-js": "^3.8.1",
+    "del": "^4.1.1",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.3.2",
+    "gulp-if": "^2.0.2",
+    "gulp-inline-ng2-template": "^4.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "intl": "^1.2.5",
+    "run-sequence": "^1.2.2",
+    "rxjs": "^6.6.3",
+    "stylelint": "^8.2.0",
+    "stylelint-scss": "^2.1.0",
+    "ts-node": "^3.2.0",
+    "tslib": "^1.14.1",
+    "tslint": "^5.7.0",
+    "typescript": "^3.8.3",
+    "web-animations-js": "^2.2.5",
+    "zone.js": "^0.10.3"
+  }
 }
